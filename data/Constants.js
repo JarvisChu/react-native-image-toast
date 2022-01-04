@@ -1,6 +1,7 @@
 import {Easing} from 'react-native'
 
 const ToastDuration = {
+    FOREVER: 100000000,
     LONG: 3500,
     SHORT: 2000
 }
