@@ -1,0 +1,28 @@
+{
+  "name": "react-native-image-toast",
+  "version": "0.0.1",
+  "description": "react native toast supports image",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JarvisChu/react-native-image-toast.git"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "toast",
+    "image"
+  ],
+  "author": "JarvisChu",
+  "license": "MIT",
+  "dependencies": {
+    "react-native-root-siblings": "^4.1.0"
+  },
+  "bugs": {
+    "url": "https://github.com/JarvisChu/react-native-image-toast/issues"
+  },
+  "homepage": "https://github.com/JarvisChu/react-native-image-toast#readme"
+}
