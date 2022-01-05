@@ -1,7 +1,7 @@
 import React from 'react'
 import RootSiblings from 'react-native-root-siblings'
 import ToastView from "./ToastView"
-import {ToastDuration,ToastInOutDuration,ToastPosition,ToastDefaultOpt} from '../data/Constants'
+import {ToastDuration,ToastPosition,ToastDefaultOpt} from '../data/Constants'
 
 let rootSiblings = undefined
 let liftCycleManage = undefined
@@ -27,7 +27,7 @@ export default class Toast {
 
         liftCycleManage = setTimeout(()=>{
             Toast.hide()
-        }, toastOpts.duration+ToastInOutDuration*2)
+        }, toastOpts.duration+toastOpts.toastInOutDuration*2)
     }
 
     static hide = () => {

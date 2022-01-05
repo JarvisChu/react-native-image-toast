@@ -25,42 +25,10 @@ const ToastDefaultOpt = {
     backgroundColor: 'black',
     icon: undefined,
     isShowShadow: true,
+    toastInHeight: ToastInHeight,
+    toastInOutDuration: ToastInOutDuration,
 }
 
-// ---------
-
-const SnackBarDuration = {
-    LONG: 3500,
-    SHORT: 2000,
-    INDEFINITE: -1
-}
-
-const SnackBarPosition = {
-    TOP: 1,
-    BOTTOM: -1
-}
-
-
-const SnackBarDefaultOpt = {
-    data: '',  //required
-    statusBarHeight: -1,
-    height: 44,
-    duration: SnackBarDuration.SHORT,
-    position: SnackBarPosition.BOTTOM,
-    inEasing: Easing.linear,
-    textColor: 'white',
-    backgroundColor: 'black',
-    actionText: undefined,
-    actionTextColor: 'white',
-    isAllowSlideExit: true,
-    onActionHide: undefined,
-    isShowShadow: true,
-    numberOfLines: 1,
-}
-
-const SnackBarInOutDuration = 200
-
-// --------
 const ModalDefaultOpt = {
     data: '',  //required
     position: ToastPosition.BOTTOM,
@@ -72,7 +40,5 @@ const ModalDefaultOpt = {
 }
 
 export {
-    ToastDuration,ToastInOutDuration,ToastInHeight,ToastPosition,ToastDefaultOpt,
-    SnackBarDuration,SnackBarPosition,SnackBarDefaultOpt,SnackBarInOutDuration,
-    ModalDefaultOpt
+    ToastDuration,ToastInOutDuration,ToastInHeight,ToastPosition,ToastDefaultOpt,ModalDefaultOpt
 }

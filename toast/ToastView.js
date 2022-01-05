@@ -6,7 +6,6 @@ import {
     Dimensions,
     Animated
 } from 'react-native'
-import {ToastInOutDuration, ToastInHeight} from '../data/Constants'
 import { shadowBlackStyleBottom } from '../util/UiUtil'
 
 const MaxWidthRatio = 0.8
@@ -61,7 +60,7 @@ export default class ToastView extends Component{
             containerStyle.bottom = 0;
             contentStyle.marginTop = this.state.animatedValue1.interpolate({
                 inputRange: [0, 1],
-                outputRange: [ToastInHeight/2, 0]
+                outputRange: [this.props.toastInHeight/2, 0]
             });
         } else if (this.props.position == 0) {
             containerStyle.justifyContent = 'center';
@@ -69,7 +68,7 @@ export default class ToastView extends Component{
             containerStyle.bottom = 0;
             contentStyle.marginTop = this.state.animatedValue1.interpolate({
                 inputRange: [0, 1],
-                outputRange: [ToastInHeight, 0]
+                outputRange: [this.props.toastInHeight, 0]
             });
         } else if (this.props.position < 0) {
             containerStyle.justifyContent = 'flex-end';
@@ -77,7 +76,7 @@ export default class ToastView extends Component{
             containerStyle.bottom = 40;
             contentStyle.marginBottom = this.state.animatedValue1.interpolate({
                 inputRange: [0, 1],
-                outputRange: [0, ToastInHeight/2]
+                outputRange: [0, this.props.toastInHeight/2]
             });
         }
 
@@ -109,7 +108,7 @@ export default class ToastView extends Component{
                     this.state.animatedValue1,
                     {
                         toValue: 1,
-                        duration: ToastInOutDuration,
+                        duration: this.props.toastInOutDuration,
                         easing: this.props.inEasing,
                         useNativeDriver: false,
                     }
@@ -118,7 +117,7 @@ export default class ToastView extends Component{
                     this.state.animatedValue2,
                     {
                         toValue: 1,
-                        duration: ToastInOutDuration,
+                        duration: this.props.toastInOutDuration,
                         useNativeDriver: false,
                     }
                 ),
@@ -135,7 +134,7 @@ export default class ToastView extends Component{
                 this.state.animatedValue2,
                 {
                     toValue: 2,
-                    duration: ToastInOutDuration,
+                    duration: this.props.toastInOutDuration,
                     useNativeDriver: false,
                 }
             )
