@@ -24,7 +24,6 @@ export default class ToastView extends Component{
         }
 
         // React after 17
-        //Dimensions.addEventListener('change', this.onWindowChange);
         this.dimensionsSubscription = Dimensions.addEventListener('change', this.onWindowChange);
     }
 
@@ -37,7 +36,6 @@ export default class ToastView extends Component{
             this.liftCycleAnimated.stop()
             this.liftCycleAnimated = undefined
         }
-        //Dimensions.removeEventListener('change', this.onWindowChange);
         this.dimensionsSubscription?.remove();
     }
 
